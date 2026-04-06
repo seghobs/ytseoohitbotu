@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#0f0f13">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>SEO Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Ana Taşıyıcı Kutu -->
+    <div class="app-wrapper">
+        
+        <!-- Masaüstü MacOS Şeklinde Sahte Pencere Kontrolleri -->
+        <div class="window-header">
+            <div class="window-controls">
+                <div class="dot close"></div>
+                <div class="dot minimize"></div>
+                <div class="dot maximize"></div>
+            </div>
+            <div class="window-title">Antigravity Bot Studio</div>
+            <div class="window-spacer"></div>
+        </div>
+        
+        <!-- İçerik Alanı -->
+        <div class="app-content">
+            
+            <!-- Sol Panel (Mobilde Üst Panel) -->
+            <div class="sidebar">
+                <div class="brand">
+                    <h1>YT Hit <span class="highlight">Oto</span></h1>
+                    <p class="subtitle">Fingerprint Engine V2</p>
+                </div>
+                
+                <form id="settingsForm">
+                    <div class="input-group">
+                        <label>Aranacak Kelime</label>
+                        <input type="text" id="aranan_kelime" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Hedef Video Linki (Youtube URL)</label>
+                        <input type="text" id="hedef_video_linki" placeholder="Örn: https://www.youtube.com/..." required>
+                    </div>
+                    
+                    <div class="row-group">
+                        <div class="input-group">
+                            <label><i class="fa-regular fa-clock"></i> Süre (sn)</label>
+                            <input type="number" id="izleme_suresi" placeholder="30" required>
+                        </div>
+                        <div class="input-group">
+                            <label><i class="fa-solid fa-repeat"></i> Döngü</label>
+                            <input type="number" id="tekrar_sayisi" placeholder="5" required>
+                        </div>
+                    </div>
+                    
+                    <div class="advanced-divider">Gelişmiş Güvenlik Şifreleri</div>
+
+                    <div class="input-group">
+                        <label>Mobil Proxy (IP:Port Formatı)</label>
+                        <input type="text" id="proxy_url" placeholder="http://user:pass@ip:port">
+                    </div>
+                    <div class="input-group">
+                        <label>IP Yenileme ve Reset Linki</label>
+                        <input type="text" id="proxy_reset_url" placeholder="http://...">
+                    </div>
+                    <div class="input-group">
+                        <label>Bablosoft API Key</label>
+                        <input type="password" id="bablosoft_key" placeholder="Premium (Opsiyonel)">
+                    </div>
+                    
+                    <!-- Mobilde sabit (sticky) alt bara dönüşen aksiyonlar -->
+                    <div class="action-buttons">
+                        <button type="button" id="saveBtn" class="btn-secondary"><i class="fa-solid fa-save"></i> Kaydet</button>
+                        <button type="submit" id="startBtn" class="btn-primary"><i class="fa-solid fa-play"></i> Başlat</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Sağ Panel (Mobilde Alt Bölüm Terminali) -->
+            <div class="main-view">
+                <div class="terminal-header">
+                    <h3><i class="fa-solid fa-terminal"></i> İşlem İzleyici</h3>
+                    <span class="status-badge" id="botStatus">Bekliyor</span>
+                </div>
+                <!-- Log Cihazı -->
+                <div class="terminal-body" id="terminalBox">
+                    <div class="log-line welcome-msg">>>> Antigravity SEO Engine v2.0 Yüklendi. Bekleniyor...</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
